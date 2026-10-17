@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Smart Study Planner</h1>
+        <p>Plan smarter. Study better. Achieve more.</p>
+    </header>
+
+    <main>
+        <section class="summary">
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <p id="total-tasks">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <p id="completed-tasks">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <p id="pending-tasks">0</p>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2>Add a Study Task</h2>
+
+            <form id="task-form">
+                <input
+                    type="text"
+                    id="task-name"
+                    placeholder="What do you need to study?"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Subject (e.g. JavaScript)"
+                    required
+                >
+
+                <input
+                    type="date"
+                    id="deadline"
+                    required
+                >
+
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        
+<section class="task-section">
+    <h2>Your Study Tasks</h2>
+
+    <label for="task-filter">Filter tasks:</label>
+    <select id="task-filter">
+        <option value="all">All tasks</option>
+        <option value="pending">Pending tasks</option>
+        <option value="completed">Completed tasks</option>
+        <option value="overdue">Overdue tasks</option>
+    </select>
+
+    <div class="progress-heading">
+        <span>Overall Progress</span>
+        <span id="progress-text">0%</span>
+    </div>
+
+    <div
+        class="progress-track"
+        role="progressbar"
+        aria-label="Study task completion"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+        id="progress-track"
+    >
+        <div id="progress-bar"></div>
+    </div>
+
+    <ul id="task-list"></ul>
+    <p id="empty-message">
+        No tasks to show. Add your first study task!
+    </p>
+</section>
+
+    </main>
+
+    <footer>
+        <p>Built by me with HTML, CSS and JavaScript.</p>
+    </footer>
+
+</body>
+</html>
